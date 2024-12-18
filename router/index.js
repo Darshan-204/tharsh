@@ -11,6 +11,8 @@ const GetSoilDetailOfUser = require("../controllers/soilFertility/GetSoilDetailO
 const EmailService=require("../controllers/User/EmailService");
 const SuggestDetails = require("../controllers/query/SuggestDetails");
 const GetQuery = require("../controllers/query/GetQuery");
+const GetIndividualQuery = require("../controllers/query/GetIndividualQuery");
+const Prediction = require("../controllers/soilFertility/Prediction");
 const router=express.Router()
 
 
@@ -34,5 +36,7 @@ router.post("/email",EmailService);
 //end point for the query from the user
 router.post("/query-detail",SuggestDetails);
 router.post("/GetQuery",GetQuery);
+router.post("/getIndQuery",GetIndividualQuery);
+router.post("/prediction",Prediction);
 
 module.exports=router;
